@@ -1,0 +1,5 @@
+#1/bin/bash
+
+sudo apt install -y zsh tmux picom feh i3blocks xclip flameshot thunar
+
+sudo apt install -y materia-gtk-theme papirus-icon-theme lxappearance fonts-font-awesome
