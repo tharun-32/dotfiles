@@ -31,7 +31,8 @@
  window-padding-x = 0
  window-padding-y = 0
  window-padding-balance = true
-
+background-opacity = 0.9
+background-blur-radius = 100
 
 #background color
 background = #000000
