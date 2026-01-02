@@ -15,7 +15,7 @@ sudo pacman -S --needed --noconfirm stow
 yay -S --needed --noconfirm brave-bin google-chrome
 
 #fonts
-sudo pacman -S --needed --noconfirm ttf-jetbrains-mono-nerd otf-font-awesome ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
+sudo pacman -S --needed --noconfirm ttf-jetbrains-mono-nerd off-font-awesome ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
 
 #development
 yay -S --needed --noconfirm visual-studio-code-bin 
