@@ -1,0 +1,31 @@
+#1/bin/bash
+
+#hyprland
+sudo pacman -S --needed --noconfirm hyprland wayland waybar hyprpaper xdg-desktop-portal-hyprland networkmanager network-manager-applet blueman 
+
+#enable bluetooth and network
+sudo systemctl enable NetworkManager bluetooth
+sudo systemctl start NetworkManager bluetooth
+
+#installing yay
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+#setting up zsh
+sudo pacman -S --needed --noconfirm zsh
+zsh
+
+#setting oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#plugins syntax-highlighting autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+#calling setup so everything will be installed 
+./setup
+
+#pushing dotfiles to their places using stow
+stow nvim tmux ghostty zsh

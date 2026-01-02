@@ -1,5 +1,35 @@
-#1/bin/bash
+#/1/bin/bash
 
-sudo apt install -y zsh tmux picom feh i3blocks xclip flameshot thunar
+#tools
+sudo pacman -S --needed --noconfirm git curl unzip 7zip base-devel gcc fzf tree ripgrep xdg-user-dirs lazygit udiskie zsh
 
-sudo apt install -y materia-gtk-theme papirus-icon-theme lxappearance fonts-font-awesome
+sudo pacman -S --needed --noconfirm neovim kitty dunst grim slurp rofi-wayland tmux yazi wl-clipboard vlc btop
+
+#audio
+sudo pacman -S --needed --noconfirm pavucontrol pipewire
+
+#to manage dotfiles
+sudo pacman -S --needed --noconfirm stow
+
+#browser
+yay -S --needed --noconfirm brave-bin google-chrome
+
+#fonts
+sudo pacman -S --needed --noconfirm ttf-jetbrains-mono-nerd otf-font-awesome ttf-dejavu noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
+
+#development
+yay -S --needed --noconfirm visual-studio-code-bin 
+
+#downloading languages 
+#nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+#installing node
+nvm install --lts
+nvm use --lts
+
+#extras
+yay -S --needed --noconfirm vesktop
